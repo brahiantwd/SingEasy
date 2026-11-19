@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignEasy | Colombian Sign Language</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo" onclick="showSection('home')">
+            Sign<span>Easy</span>
+        </a>
+
+        <nav>
+            <button onclick="showSection('home')">Home</button>
+            <button onclick="showSection('learn')">Explore Signs</button>
+            <button onclick="showSection('about')">About</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HOME -->
+        <section id="home" class="section active">
+
+            <div class="hero">
+                <div class="hero-content">
+                    <span class="tag">LEARN • EXPLORE • CONNECT</span>
+
+                    <h1>
+                        A new way to<br>
+                        <span>communicate.</span>
+                    </h1>
+
+                    <p>
+                        Discover Colombian Sign Language.
+                        Learn new signs through real videos
+                        and explore a world of communication.
+                    </p>
+
+                    <button class="primary-btn"
+                        onclick="showSection('learn')">
+                        Explore signs →
+                    </button>
+                </div>
+
+                <div class="hero-art">
+                    <div class="art-circle">
+                        <span>SignEasy</span>
+                        <strong>COMMUNICATION<br>FOR EVERYONE</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-heading">
+                <span class="tag">START LEARNING</span>
+                <h2>Discover Colombian Sign Language</h2>
+                <p>
+                    Learn useful expressions and everyday vocabulary.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+
+                <article class="feature-card">
+                    <div class="feature-number">01</div>
+                    <h3>Real Videos</h3>
+                    <p>
+                        Watch real people performing signs
+                        in Colombian Sign Language.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-number">02</div>
+                    <h3>Explore Categories</h3>
+                    <p>
+                        Find greetings, emotions and
+                        everyday expressions.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-number">03</div>
+                    <h3>Learn at Your Pace</h3>
+                    <p>
+                        Watch, pause and repeat every
+                        sign whenever you want.
+                    </p>
+                </article>
+
+            </div>
+
+            <div class="home-bottom">
+                <h2>Start learning today!</h2>
+                <p>Every new sign is a new way to connect.</p>
+                <button class="primary-btn"
+                    onclick="showSection('learn')">
+                    Browse the catalog →
+                </button>
+            </div>
+
+        </section>
+
+        <!-- CATALOG -->
+        <section id="learn" class="section">
+
+            <div class="section-heading">
+                <span class="tag">SIGN LANGUAGE LIBRARY</span>
+                <h1>Explore the signs</h1>
+                <p>
+                    Search for a word or choose a category
+                    to find a sign.
+                </p>
+            </div>
+
+            <div class="catalog-controls">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search a sign... (Hello, Love, Help...)"
+                    oninput="filterSigns()">
+
+                <div class="filters">
+                    <button class="filter-btn active"
+                        onclick="selectCategory('All', this)">
+                        All signs
+                    </button>
+
+                    <button class="filter-btn"
+                        onclick="selectCategory('Greetings', this)">
+                        Greetings
+                    </button>
+
+                    <button class="filter-btn"
+                        onclick="selectCategory('Expressions', this)">
+                        Expressions
+                    </button>
+
+                    <button class="filter-btn"
+                        onclick="selectCategory('Emotions', this)">
+                        Emotions
+                    </button>
+
+                    <button class="filter-btn"
+                        onclick="selectCategory('Everyday', this)">
+                        Everyday life
+                    </button>
+
+                </div>
+
+                <p id="resultsCount" class="results-count"></p>
+
+            </div>
+
+            <div id="signGrid" class="sign-grid"></div>
+
+            <div id="noResults" class="no-results hidden">
+                <h2>No signs found</h2>
+                <p>Try another word or category.</p>
+            </div>
+
+            <div class="source-note">
+                <p>
+                    Videos: INSOR Colombia – Una seña para ti (2019).
+                </p>
+
+                <a href="https://conecta.insor.gov.co/contenidos-accesibles/"
+                    target="_blank" rel="noopener">
+                    Visit the official INSOR resource →
+                </a>
+            </div>
+
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="section">
+
+            <div class="about-container">
+
+                <span class="tag">ABOUT US</span>
+
+                <h1>Communication is for everyone.</h1>
+
+                <p>
+                    SignEasy is an educational platform
+                    created to help people discover
+                    Colombian Sign Language (LSC).
+                </p>
+
+                <p>
+                    Our application provides a catalog
+                    of real sign language videos, organized
+                    into categories for easy learning.
+                </p>
+
+                <p>
+                    Our mission is to promote inclusion
+                    and encourage communication with
+                    the Deaf community.
+                </p>
+
+                <a href="https://educativo.insor.gov.co/"
+                    target="_blank" rel="noopener">
+                    Learn more about INSOR →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <h2>SignEasy</h2>
+        <p>Learn signs. Build connections. Create inclusion.</p>
+        <p class="copyright">Educational project · 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
